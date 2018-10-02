@@ -23,6 +23,16 @@
         clear: both;
     }
 
+    th {
+        text-align: center;
+        background-color: #ffffcc;
+        padding: 2px;
+    }
+
+    td {
+        background-color: #E9CFFF;
+    }
+
     .center {
         text-align: center;
         margin: auto;
@@ -80,7 +90,7 @@
         </div>
     </div>
     <div class='center'>
-    	<button class='btn btn-dark'>Click Me!</button>
+        <button class='btn btn-dark'>Picture Toggle!</button>
     </div>
     <br>
     <div class='background center'>
@@ -106,41 +116,59 @@
         <br>
         <h3 class='center'>Hobbies and Interests</h3>
         <br>
-        <table border='1' class='center'>
-            <thead class='center'>
-                <th style="text-align: center;">Favorite Movies</th>
-                <th style="text-align: center;">Favorite Coding Languages</th>
-                <th style="text-align: center;">Travel Goals</th>
+        <table border='2' class='center'>
+            <thead>
+                <th>Favorite Movies</th>
+                <th>Favorite Coding Languages</th>
+                <th>Travel Goals</th>
             </thead>
             <tbody>
                 <tr>
-                    <td>A Beautiful Mind</td>
-                    <td>Javascript</td>
-                    <td>Iceland</td>
+                    <td>
+                    	<a href='https://www.imdb.com/title/tt0268978/' target="_blank">A Beautiful Mind</a>
+                    </td>
+                    <td>
+                    	<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">Javascript</a>
+                	</td>
+                    <td>
+                    	<a href="https://www.travelandleisure.com/travel-guide/iceland" target="_blank">Iceland</a>
+                    </td>
                 </tr>
                 <tr>
-                    <td>Memiors of a Geisha</td>
-                    <td>Python</td>
-                    <td>Norway</td>
+                    <td>
+                    	<a href='https://www.imdb.com/title/tt0397535/' target="_blank">Memiors of a Geisha</a>
+                    </td>
+                    <td>
+                    	<a href="https://developer.mozilla.org/en-US/docs/Learn/Drafts/Python" target="_blank">Python</a>
+                    </td>
+                    <td>
+                    	<a href="https://www.travelandleisure.com/travel-guide/norway" target="_blank">Norway</a>
+                    </td>
                 </tr>
                 <tr>
-                    <td>Kissing Booth</td>
-                    <td>SQL</td>
-                    <td>Ireland</td>
+                    <td>
+                    	<a href='https://www.imdb.com/title/tt3799232/' target="_blank">The Kissing Booth</a>
+                    </td>
+                    <td>
+                    	<a href="https://developer.mozilla.org/en-US/docs/Glossary/SQL" target="_blank">SQL</a>
+                    </td>
+                    <td>
+                    	<a href="https://www.travelandleisure.com/travel-guide/ireland" target="_blank">Ireland</a>
+                    </td>
                 </tr>
             </tbody>
         </table>
     </div>
     <script type="text/javascript">
-    	$(function() {
-		  $('img').on('mouseover', function(){
-		  	$(this).fadeOut(500)
-		  	$(this).fadeIn(500)
-		  });
-		  $('button').on('click', function(){
-		  	alert('Hello there!')
-		  });
-		});
+    $(function() {
+        $('img').on('mouseover', function() {
+            $(this).fadeOut(500)
+            $(this).fadeIn(500)
+        });
+        $('button').on('click', function() {
+            $('img').toggle('explode')
+        });
+    });
     </script>
 </body>
 
