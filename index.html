@@ -5,6 +5,9 @@
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<style type="text/css">
+		* {
+		    box-sizing: border-box;
+		}
 		body {
 			margin: 20px;
 		}
@@ -12,20 +15,21 @@
 			text-align: center;
 			margin: auto;
 			width: 75%;
+			clear: both;
 		}
 		.img {
-			width: 25%;
-			margin-left: 25%;
+			height: 200px;
+			width: auto;
 			margin-top: 10px;
 			margin-bottom: 10px;
 			border-style: solid;
 			border-width: 2px;
 			border-color: green;
 			border-radius: 25px;
-			float: left;
 		}
 		ul {
 		    list-style-position: inside;
+		    clear: both;
 		}
 		.jumbotron {
 			border-style: solid;
@@ -34,15 +38,30 @@
 			border-radius: 25px;
 			background-color: #D1FDE9;			
 		}
+		.box{
+			text-align:center;
+    		display: flex;
+		}
+		.column{
+			flex: 33.333%;
+    		padding: 5px;
+		}
 	</style>
 </head>
 <body>
 	<div class='jumbotron center bg-info'>
 		<h1>Stacy Marshall's Amazing Bio</h1>
 	</div>
-	<div>
-		<img class='img' src='https://sam-marshall.github.io/HatPic.jpg' alt="Stacy's Gorgeous Face" />
-		<img class='img' src='https://sam-marshall.github.io/FluffyHat.jpg' alt="Stacy's Gorgeous Face With Fluffy Hat" />
+	<div class='box'>
+		<div class='column'>
+			<img class='img' src='https://sam-marshall.github.io/HatPic.jpg' alt="Stacy's Gorgeous Face" />
+		</div>
+		<div class='column'>
+			<img class='img' src='https://sam-marshall.github.io/Boat.jpg' alt="Stacy's Gorgeous Face" />
+		</div>
+		<div class='column'>
+			<img class='img' src='https://sam-marshall.github.io/FluffyHat.jpg' alt="Stacy's Gorgeous Face With Fluffy Hat" />
+		</div>
 	</div>
 	
 	<p class='center' >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer et placerat purus. Duis pulvinar elit eget quam blandit convallis. In eget ligula et lectus aliquam ultricies. Donec dapibus ut turpis vel efficitur. Phasellus non fermentum tellus. Nam placerat blandit magna, eu ornare orci ultricies at. Donec quis turpis a turpis aliquam ultrices a in nunc. Suspendisse sollicitudin neque pharetra mollis gravida. Etiam at felis congue, mattis enim vel, fermentum lorem. Donec faucibus egestas neque, eget cursus lectus aliquam vel. Sed dignissim nisi magna, et auctor sapien rhoncus vitae. Sed eu vestibulum ligula. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce in tristique ligula.</p>
